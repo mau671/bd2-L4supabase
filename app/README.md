@@ -1,21 +1,23 @@
-App Cliente de Backend de Ventas Supabase (Python)
+# App Cliente de Backend de Ventas Supabase (Python)
+
 Este es el cliente de consola en Python para interactuar con el backend de ventas desarrollado en Supabase, centrado en validar la Autenticación y las Políticas de Seguridad a Nivel de Fila (RLS).
 
 El script realiza la autenticación, lista los datos permitidos por RLS (clientes por país, productos por categoría) e intenta crear una factura con sus líneas, verificando la doble restricción de RLS.
 
 Requisitos Previos para usar la aplicacion
 
-
 Python 3.10+
 
 Conocer uno de los usuarios creados en Supabase Auth con permisos asignados en las tablas user_allowed_country y user_allowed_category.
 
-# 1. Instalación de Dependencias
+## 1. Instalación de Dependencias
+
 se deben instalar supabase y dotenv, puede usar el siguiente comando en el directorio raíz de la aplicación para instalar dichas librerías:
 
         pip install supabase python-dotenv
 
-# 2. Configuración de Variables de Entorno (.env)
+## 2. Configuración de Variables de Entorno (.env)
+
 Debes crear un archivo llamado .env en el mismo directorio que main.py para almacenar de forma segura las credenciales del proyecto y del usuario de prueba.
 
 -----------------------------------------------------
@@ -26,12 +28,12 @@ Credenciales del proyecto de Supabase
 -----------------------------------------------------
 Credenciales del Usuario de Prueba RLS
 
-
     USER_EMAIL="usuario@dominio.com"
 
     USER_PASSWORD="password"
 
-# 3. Ejecución de la Aplicación
+## 3. Ejecución de la Aplicación
+
 Ejecuta el script principal desde su terminal:
 
 python app/main.py
@@ -48,7 +50,6 @@ Se mostrará un menú
     7. Crear factura con RPC (cuando esté lista)
     0. Salir
 
-
  Ejemplo de uso (flujo manual)
 
     Listar clientes y anotar un ID de cliente.
@@ -57,7 +58,7 @@ Se mostrará un menú
     Agregar línea indicando cantidad y precio.
     Repetir hasta terminar y mostrar la factura
 
-# 4. Funcionalidades
+## 4. Funcionalidades
 
     1. Autenticación: login con Supabase Auth (email y password).
 
@@ -76,3 +77,4 @@ Se mostrará un menú
         5.1 Ventas por país (vista SQL v_sales_by_country).
         5.2 RPC (pendiente en SQL):
         5.3 Crear factura + líneas en una sola transacción (create_invoice).
+    
