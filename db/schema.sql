@@ -1,6 +1,6 @@
 -- Ejecutar en Supabase SQL Editor
 
-- ============================================
+-- ============================================
 -- Dominios
 -- ============================================
 create table if not exists public.countries (
