@@ -30,6 +30,32 @@ curl -L 'https://pntefwrxizxlwxadtepo.supabase.co/rest/v1/invoice_lines?select=*
 -H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudGVmd3J4aXp4bHd4YWR0ZXBvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTAyNDYwOCwiZXhwIjoyMDc0NjAwNjA4fQ.ZjGtERZvvysa-4CAHZmOts5dQm_sNf5mm3aFMdAHnGI' \
 -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudGVmd3J4aXp4bHd4YWR0ZXBvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTAyNDYwOCwiZXhwIjoyMDc0NjAwNjA4fQ.ZjGtERZvvysa-4CAHZmOts5dQm_sNf5mm3aFMdAHnGI'
 ```
+## Vista ventas	general
+``` bash
+curl -L 'https://pntefwrxizxlwxadtepo.supabase.co/rest/v1/v_sales_fact?select=*' \
+-H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudGVmd3J4aXp4bHd4YWR0ZXBvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTAyNDYwOCwiZXhwIjoyMDc0NjAwNjA4fQ.ZjGtERZvvysa-4CAHZmOts5dQm_sNf5mm3aFMdAHnGI' \
+-H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudGVmd3J4aXp4bHd4YWR0ZXBvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTAyNDYwOCwiZXhwIjoyMDc0NjAwNjA4fQ.ZjGtERZvvysa-4CAHZmOts5dQm_sNf5mm3aFMdAHnGI'
+```
+
+## Vista ventas por país
+``` bash
+curl -L 'https://pntefwrxizxlwxadtepo.supabase.co/rest/v1/v_sales_by_country?select=*' \
+-H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudGVmd3J4aXp4bHd4YWR0ZXBvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTAyNDYwOCwiZXhwIjoyMDc0NjAwNjA4fQ.ZjGtERZvvysa-4CAHZmOts5dQm_sNf5mm3aFMdAHnGI' \
+-H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudGVmd3J4aXp4bHd4YWR0ZXBvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTAyNDYwOCwiZXhwIjoyMDc0NjAwNjA4fQ.ZjGtERZvvysa-4CAHZmOts5dQm_sNf5mm3aFMdAHnGI'
+```
+
+## Vista venta por categoría
+```bash
+curl -L 'https://pntefwrxizxlwxadtepo.supabase.co/rest/v1/v_sales_by_category?select=*' \
+-H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudGVmd3J4aXp4bHd4YWR0ZXBvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTAyNDYwOCwiZXhwIjoyMDc0NjAwNjA4fQ.ZjGtERZvvysa-4CAHZmOts5dQm_sNf5mm3aFMdAHnGI' \
+-H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudGVmd3J4aXp4bHd4YWR0ZXBvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTAyNDYwOCwiZXhwIjoyMDc0NjAwNjA4fQ.ZjGtERZvvysa-4CAHZmOts5dQm_sNf5mm3aFMdAHnGI'
+```
+## Vista venta por top N Productos
+```bash
+curl -L 'https://pntefwrxizxlwxadtepo.supabase.co/rest/v1/v_top_products_30d?select=*' \
+-H 'apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudGVmd3J4aXp4bHd4YWR0ZXBvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTAyNDYwOCwiZXhwIjoyMDc0NjAwNjA4fQ.ZjGtERZvvysa-4CAHZmOts5dQm_sNf5mm3aFMdAHnGI' \
+-H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudGVmd3J4aXp4bHd4YWR0ZXBvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTAyNDYwOCwiZXhwIjoyMDc0NjAwNjA4fQ.ZjGtERZvvysa-4CAHZmOts5dQm_sNf5mm3aFMdAHnGI'
+```
 
 ## Creación de invoices
 ```bash
@@ -57,4 +83,4 @@ curl -L 'https://pntefwrxizxlwxadtepo.supabase.co/auth/v1/token?grant_type=passw
   "email": "cliente2@example.com",
   "password": "cliente2"
 }'
-```
+
