@@ -39,8 +39,7 @@ def list_my_customers(sb: Client):
 
 
 def create_invoice(sb: Client, customer_id: int):
-    inv = sb.table("invoices").insert({"customer_id":
-    customer_id}).select("*").execute()
+    inv = sb.table("invoices").insert({"customer_id":customer_id}).execute()
     print("Invoice:", inv.data)
     return inv.data[0]["id"]
 
