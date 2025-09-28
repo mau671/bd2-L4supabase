@@ -26,12 +26,16 @@ def login() -> Client:
 
 def list_my_products(sb: Client):
     res = sb.table("products").select("*").execute()
-    print("Products (RLS applied):", res.data)
+    print("Products (RLS applied):")
+    for a in res.data:
+        print(a)
 
 
 def list_my_customers(sb: Client):
     res = sb.table("customers").select("*").execute()
-    print("Customers (RLS applied):", res.data)
+    print("Customers (RLS applied):")
+    for a in res.data:
+        print(a)
 
 
 def create_invoice(sb: Client, customer_id: int):
@@ -51,14 +55,20 @@ def add_line(sb: Client, invoice_id: int, product_id: int, qty: float, unit_pric
         "unit_price": unit_price,
     }
     res = sb.table("invoice_line").insert(line).select("*").execute()
-    print("Line:", res.data)
+    print("Line:")
+    for a in res.data:
+        print(a)
 
 
 def show_invoice_with_lines(sb: Client, invoice_id: int):
     inv = sb.table("invoices").select("*").eq("id",invoice_id).execute()
     lines = sb.table("invoice_lines").select("*").eq("invoice_id",invoice_id).execute()
     print("Invoice:", inv.data)
-    print("Lines:", lines.data)
+    for a in inv:
+        print(a)
+    print("Lines:")
+    for b in lines:
+        print(b)
 
 
 # las nuevas
@@ -95,6 +105,7 @@ def clear_console():
     """Limpia la consola basándose en el sistema operativo."""
 
     # Detecta el sistema operativo
+    input("\nPulse ENTER para continuar...\n")
     system = platform.system()
 
     if system == "Windows":
@@ -120,11 +131,9 @@ if __name__ == "__main__":
 
         if op == "1":
             list_my_products(sb)
-            input("\nPulse ENTER para continuar...\n")
             clear_console()
         elif op == "2":
             list_my_customers(sb)
-            input("\nPulse ENTER para continuar...\n")
             clear_console()
 
         elif op == "3":
@@ -141,15 +150,19 @@ if __name__ == "__main__":
                 add_line(sb, inv_id, prod_id, qty, price)
 
             show_invoice_with_lines(sb, inv_id)
+            clear_console()
         elif op == "4":
             cat_id = int(input("ID categoría: "))
             list_products_by_category(sb, cat_id)
+            clear_console()
         elif op == "5":
             code = input("Código país (ej: CR, US): ").upper()
             list_customers_by_country(sb, code)
+            clear_console()
         elif op == "6":
             code = input("Código país (ej: CR, US): ").upper()
             sales_by_country(sb, code)
+            clear_console()
         elif op == "7":
             cust_id = int(input("ID cliente: "))
             items = []
@@ -160,8 +173,10 @@ if __name__ == "__main__":
                 qty = float(input("Cantidad: "))
                 items.append({"product_id": prod_id, "quantity": qty})
             create_invoice_rpc(sb, cust_id, items)
+            clear_console()
         elif op == "0":
             print("Saliendo...")
+            clear_console()
             break
         else:
             print(" Opción inválida")
