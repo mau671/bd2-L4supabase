@@ -13,4 +13,4 @@ Escuela de Ingeniería en Computación
 - Mauricio González Prendas
 - Aarón
 - Susana
-- Ximena
+- Ximena Molina Portilla
