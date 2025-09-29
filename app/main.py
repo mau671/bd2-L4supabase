@@ -123,7 +123,7 @@ if __name__ == "__main__":
         print("3. Crear factura manualmente")
         print("4. Filtrar productos por categoría")
         print("5. Filtrar clientes por país")
-        print("6. Reprte: ventas por país (vista)")
+        print("6. Reporte: ventas por país (vista)")
         print("7. Crear factura con RPC")
         print("0. Salir")
         op = input("Opción: ")
