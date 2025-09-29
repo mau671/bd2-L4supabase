@@ -11,6 +11,6 @@ Escuela de Ingeniería en Computación
 **Integrantes**:
 
 - Mauricio González Prendas
-- Aarón
 - Susana
 - Ximena Molina Portilla
+- Aarón Vásquez Báñez
