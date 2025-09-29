@@ -103,7 +103,7 @@ curl -L 'https://pntefwrxizxlwxadtepo.supabase.co/auth/v1/token?grant_type=passw
 ```bash
 curl -X POST "https://pntefwrxizxlwxadtepo.supabase.co/rest/v1/rpc/create_invoice" \
   -H "Content-Type: application/json" \
-  -H "apikey: {{apiKey}}" \
+  -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBudGVmd3J4aXp4bHd4YWR0ZXBvIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1OTAyNDYwOCwiZXhwIjoyMDc0NjAwNjA4fQ.ZjGtERZvvysa-4CAHZmOts5dQm_sNf5mm3aFMdAHnGI" \
   -H "Authorization: Bearer {{auth}}" \
   -H "Prefer: return=representation" \
   --data '{
