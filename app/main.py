@@ -53,7 +53,7 @@ def add_line(sb: Client, invoice_id: int, product_id: int, qty: float, unit_pric
         "quantity": qty,
         "unit_price": unit_price,
     }
-    res = sb.table("invoice_line").insert(line).select("*").execute()
+    res = sb.table("invoice_lines").insert(line).execute()
     print("Line:")
     for a in res.data:
         print(a)
