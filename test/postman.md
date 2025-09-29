@@ -95,3 +95,24 @@ curl -L 'https://pntefwrxizxlwxadtepo.supabase.co/auth/v1/token?grant_type=passw
   "password": "cliente2"
 }'
 ```
+
+## Llamada a función create_invoice
+
+> Nota: Si se usan los datos pruebsa usar el token de `cliente1@example.com` para evitar errores de RLS
+
+```bash
+curl -X POST "https://pntefwrxizxlwxadtepo.supabase.co/rest/v1/rpc/create_invoice" \
+  -H "Content-Type: application/json" \
+  -H "apikey: {{apiKey}}" \
+  -H "Authorization: Bearer {{auth}}" \
+  -H "Prefer: return=representation" \
+  --data '{
+    "customer_id": 1,
+    "items": [
+      {
+        "product_id": 8,
+        "quantity": 3
+      }
+    ]
+  }'
+```
