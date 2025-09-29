@@ -1,0 +1,16 @@
+# Taller Supabase
+
+**Instituto Tecnológico de Costa Rica**  
+Campus Tecnológico Central Cartago  
+Escuela de Ingeniería en Computación  
+
+**Curso**: IC4302 Bases de datos II  
+**Profesor**: Diego Andres Mora Rojas  
+**Semestre**: II Semestre, 2025  
+
+**Integrantes**:
+
+- Mauricio González Prendas
+- Aarón
+- Susana
+- Ximena
