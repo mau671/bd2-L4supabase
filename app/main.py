@@ -84,7 +84,6 @@ def list_customers_by_country(sb: Client, code: str):
     for c in res.data:
         print(c)
 
-
 def sales_by_country(sb: Client, code: str):
     res = sb.table("v_sales_by_country").select("*").eq("country_code", code).execute()
     print(f"\n💰 Ventas por país {code}:")

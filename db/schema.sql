@@ -534,3 +534,127 @@ grant select on public.v_sales_fact,
                public.v_sales_by_country,
                public.v_top_products_30d
 to authenticated;
+
+-- ============================================
+-- Inserciones
+-- ============================================
+
+-- ============================================
+-- countries: códigos y nombres de países
+-- ============================================
+INSERT INTO "public"."countries" ("code", "name") 
+VALUES
+  ('AR', 'Argentina'),
+  ('BR', 'Brazil'),
+  ('CA', 'Canada'),
+  ('CL', 'Chile'),
+  ('CO', 'Colombia'),
+  ('CR', 'Costa Rica'),
+  ('CU', 'Cuba'),
+  ('EC', 'Ecuador'),
+  ('GT', 'Guatemala'),
+  ('MX', 'Mexico'),
+  ('PA', 'Panama'),
+  ('PE', 'Peru'),
+  ('US', 'United States'),
+  ('UY', 'Uruguay'),
+  ('VE', 'Venezuela');
+
+-- ============================================
+-- categories: categorías de productos
+-- ============================================
+INSERT INTO "public"."categories" ("name") 
+VALUES
+  ('Electronics'),
+  ('Furniture'),
+  ('Clothing'),
+  ('Footwear'),
+  ('Books'),
+  ('Toys'),
+  ('Groceries'),
+  ('Appliances'),
+  ('Beauty'),
+  ('Sports Equipment'),
+  ('Automotive'),
+  ('Jewelry'),
+  ('Office Supplies'),
+  ('Pet Supplies');
+
+-- ============================================
+-- products: productos que ofrece la plataforma
+-- ============================================
+INSERT INTO "public"."products" ("name", "category_id", "unit_price") 
+VALUES
+  ('Smartphone', '1', '699.99'),
+  ('Bluetooth Headphones', '1', '129.50'),
+  ('Wooden Coffee Table', '2', '245.00'),
+  ('Office Chair Ergonomic', '2', '180.00'),
+  ('Men''s Polo Shirt', '3', '25.99'),
+  ('Women''s Sneakers', '4', '59.90'),
+  ('Remote Control Drone', '8', '89.99'),
+  ('Organic Quinoa 1kg', '7', '4.75'),
+  ('Refrigerator 300L', '8', '520.00'),
+  ('Facial Cleanser Gel', '9', '12.50'),
+  ('Tennis Racket', '10', '45.00'),
+  ('Adjustable Dumbbells Set', '10', '65.00'),
+  ('Car Engine Oil 4L', '11', '32.00'),
+  ('Silver Bracelet', '12', '75.00'),
+  ('Ballpoint Pen Pack (10)', '13', '3.99'),
+  ('Cat Litter 10kg', '14', '11.25'),
+  ('Gaming Laptop', '1', '1299.00'),
+  ('Women''s Blouse', '3', '29.50'),
+  ('Denim Jacket', '3', '49.99'),
+  ('Lipstick', '9', '12.00'),
+  ('Toner', '9', '15.00'),
+  ('Silver Bracelet', '12', '75.00'),
+  ('Pearl Necklace', '12', '150.00');
+-- ============================================
+-- customers: clientes de la plataforma
+-- ============================================
+INSERT INTO "public"."customers" ("name", "email", "country_code") 
+VALUES
+  ('Amanada Rivas','arivas@example.com','CR'),
+  ('James Carter','jcarter@example.com','US'),
+  ('Lucía Martínez','lmartinez@example.com','MX'),
+  ('Sophie Tremblay','stremblay@example.com','CA'),
+  ('Bruno Silva','bsilva@example.com','BR'),
+  ('Valentina Gómez','vgomez@example.com','AR'),
+  ('Camilo Torres','ctorres@example.com','CO'),
+  ('Isidora Fuentes','ifuentes@example.com','CL'),
+  ('Mateo Vargas','mvargas@example.com','PE'),
+  ('Gabriela Ruiz','gruiz@example.com','VE'),
+  ('Daniela Mora','dmora@example.com','EC'),
+  ('José Ramírez','jramirez@example.com','GT'),
+  ('Elena Castillo','ecastillo@example.com','CU'),
+  ('Tomás Delgado','tdelgado@example.com','PA'),
+  ('Martín Pereira','mpereira@example.com','UY'),
+  ('Amanada Rivas','arivas@example.com','CR'),
+  ('Daniela Mora','dmora@example.com','CR'),
+  ('James Carter','jcarter@example.com','US'),
+  ('Sophie Miller','smiller@example.com','US'),
+  ('Lucía Martínez','lmartinez@example.com','MX'),
+  ('José Ramírez','jramirez@example.com','MX');
+
+-- ============================================
+-- user_allowed_category: permisos de categoría
+-- por usuario
+-- ============================================
+INSERT INTO "public"."user_allowed_category" ("user_id", "category_id") 
+VALUES 
+  ('66c5d855-3259-492a-b1fd-d6d5b69b5a02', '6'), 
+  ('8493c1c8-ac41-4a10-8528-1b116a2f5587', '1'), 
+  ('8493c1c8-ac41-4a10-8528-1b116a2f5587', '12'), 
+  ('8e47f7aa-7aad-47e6-8959-d12a0451d26a', '3'), 
+  ('8e47f7aa-7aad-47e6-8959-d12a0451d26a', '9');
+
+-- ============================================
+-- user_allowed_country: permisos de países por
+-- usuario
+-- ============================================
+INSERT INTO "public"."user_allowed_country" ("user_id", "country_code") 
+VALUES 
+  ('66c5d855-3259-492a-b1fd-d6d5b69b5a02', 'UY'), 
+  ('8493c1c8-ac41-4a10-8528-1b116a2f5587', 'CR'), 
+  ('8493c1c8-ac41-4a10-8528-1b116a2f5587', 'US'), 
+  ('8e47f7aa-7aad-47e6-8959-d12a0451d26a', 'MX'), 
+  ('8e47f7aa-7aad-47e6-8959-d12a0451d26a', 'PA');
